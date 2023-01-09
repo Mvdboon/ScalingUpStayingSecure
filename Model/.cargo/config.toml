@@ -1,0 +1,12 @@
+[build]
+incremental = true        # Incremental compilation.
+rustflags   = ["-C", "link-arg=-fuse-ld=lld", "-C", "target-cpu=native"]
+# rustdocflags = ["-o", "docs", "--lib"]
+
+[profile.release]
+opt-level = 3            # Optimization level.
+codegen-units    = 1     # Number of code generation units.
+lto              = "fat" # Sets link-time optimization.
+overflow-checks  = true  # Enables runtime integer overflow checks.
+incremental = false        # Incremental compilation.
+

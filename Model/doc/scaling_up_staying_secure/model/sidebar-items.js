@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"struct":[["GridInformation",""],["Model","Struct for creating and running a model based on the respective [`ModelParameters`]."],["ModelParameters","Struct that defines the model parameters"],["MyGraph","A newtype struct for encapsulating the graph. It defines the types of the graph."]]};

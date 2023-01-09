@@ -1,0 +1,38 @@
+[package]
+name = "scaling_up_staying_secure"
+version = "0.1.0"
+edition = "2021"
+license = "MIT OR Apache-2.0"
+authors = ["Mike van der Boon"]
+default-run = "modelrunner"
+description = "A Grid simulation model for checking the impact of horizontally scaled DER attacks on the Smart Grid. Build as part of my Thesis at the TU Delft."
+
+[dependencies]
+apache-avro = { git = "https://github.com/apache/avro", features = ["derive","snappy"], rev="e59fb6436885074ce6827e6dce17a571170c14ba"}
+chrono = { version = "0.4.23" }
+configparser = { version = "3.0.2" }
+derive_more = { version = "0.99.17" }
+fast_log = { version = "1.5.46", features = ["lz4", "zip", "gzip"] }
+log = { version = "0.4.17" }
+petgraph = { version = "0.6.2", features = ["serde-1"] }
+rand = { version = "0.8.5", features = ["serde1", "serde", "simd_support", "min_const_gen", "small_rng"] }
+serde = { version = "1.0.148", features = ["derive", "rc"] }
+serde_json = { version = "1.0.89" }
+statrs = { version = '0.16.0' }
+rayon = { version = "1.6.0"}
+tokio = { version = "1.22.0", features = ["full"]}
+
+parking_lot = {version = "0.12.1", features = ["nightly", "arc_lock", "deadlock_detection"]}
+thiserror = "1.0.37"
+flate2 = "1.0.25"
+fastdate = "0.1.30"
+derive-alias = "0.1.0"
+embed-doc-image = "0.1.4"
+thousands = "0.2.0"
+
+[dev-dependencies]
+coverage-helper = "0.1"
+
+[[bin]]
+name = "modelrunner"
+path = "src/main.rs"

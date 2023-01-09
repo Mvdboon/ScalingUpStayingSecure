@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"struct":[["Attack","Information on the attack and patching behaviour during the model."],["AttackBehaviour","A step in the behaviour of the attacker. Is generated from the same attack parameters as the attack."]]};

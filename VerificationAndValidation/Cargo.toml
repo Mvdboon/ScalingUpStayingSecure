@@ -1,0 +1,23 @@
+[package]
+name = "data_analysis"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+anyhow = "1.0.66"
+linregress = "0.5.0"
+ndarray = "0.15.6"
+plotly = { version = "0.8.3", features = ["kaleido", "plotly_image"] }
+polars = { version = "0.25.1", features = ["lazy", "describe", "strings", "ndarray", "json", "parquet"] }
+reqwest = { version = "0.11.13"}
+serde = { version = "1.0.148", features = ["derive"] }
+serde_json = "1.0.89"
+tokio = { version = "1.22.0", features = ["full"] }
+clap = {version = "4.0.18", features = ["suggestions","derive","color"]}
+indicatif = { version = "0.17.2", features = ["rayon"] }
+glob = "0.3.0"
+itertools = "0.10.5"
+float_extras = "0.1.6"
+statrs = "0.16.0"
